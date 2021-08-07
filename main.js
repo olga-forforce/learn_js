@@ -1,4 +1,45 @@
-function buttonClick(){
+function buttonAboutJS() {
+    const year = prompt("Каково официальное название JavaScript?");
+
+    if (year == "ECMAScript") {
+        alert("Верно!");
+    } else {
+        alert("Не знаете, что такое ECMAScript!?");
+    }
+}
+function buttonClick() {
+    const num = prompt('Ввод значения');
+    if (num > 0) {
+        alert('1');
+    }
+    else if (num < 0) {
+        alert('-1');
+    }
+    else {
+        alert('0');
+    }
+}
+function login() {
+    let youLogin = prompt('Введите ваш логин');
+    if (youLogin == 'Админ') {
+        prompt ("Ваш пароль?");
+        {
+            if (escape) {
+                alert("Вход отменен");
+            } else if (youLogin == 'Черный властелин') {
+                alert("Добро пожаловать!");
+            } else {
+                alert("Пароль не верный");
+            }
+        }
+    }
+    else if (escape) {
+        alert("Вход отменен");
+    }
+    else {
+        alert("Я вас не знаю");
+    }
+}
     // let isAdmin = confirm('Вы администратор?');
     // console.log(isAdmin);
     //
@@ -12,15 +53,7 @@ function buttonClick(){
     // console.log(String(test1), typeof String(test2));
     // console.log(Number(test1), typeof Number(test2));
 
-    // const year = prompt("Введите год");
     //
-    // if (year == 2021){
-    //     alert("Ura!");
-    // } else if (year == 2022){
-    //     alert("Da!");
-    // } else{
-    //     alert("Oi!");
-    // }
 
     // const year = 2021;
     // switch (year){
@@ -37,9 +70,8 @@ function buttonClick(){
     //         alert('oi');
     // }
 
-    const year = prompt("god");
-    const test = year === "2021" ? "Yes" : "No";
-    alert(test);
+    // const year = prompt("god");
+    // const test = year === "2021" ? "Yes" : "No";
+    // alert(test);
 
-}
 
