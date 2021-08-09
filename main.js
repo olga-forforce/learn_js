@@ -21,19 +21,22 @@ function buttonClick() {
 }
 function login() {
     let youLogin = prompt('Введите ваш логин');
-    if (youLogin == 'Админ') {
-        prompt ("Ваш пароль?");
+    const youPassword = prompt ("Ваш пароль?");
+    console.log(youPassword);
+    console.log(youLogin);
+    if (youLogin == 'Admin') {
+        alert(youPassword);
         {
-            if (escape) {
-                alert("Вход отменен");
-            } else if (youLogin == 'Черный властелин') {
+            if (youPassword == 'Qweqwe') {
                 alert("Добро пожаловать!");
+            } else if (youPassword == null) {
+                alert("Вход отменен");
             } else {
                 alert("Пароль не верный");
             }
         }
     }
-    else if (escape) {
+    else if (youLogin == null) {
         alert("Вход отменен");
     }
     else {
