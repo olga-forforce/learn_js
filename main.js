@@ -21,12 +21,8 @@ function buttonClick() {
 }
 function login() {
     let youLogin = prompt('Введите ваш логин');
-    const youPassword = prompt ("Ваш пароль?");
-    console.log(youPassword);
-    console.log(youLogin);
     if (youLogin == 'Admin') {
-        alert(youPassword);
-        {
+        const youPassword = prompt ("Ваш пароль?");
             if (youPassword == 'Qweqwe') {
                 alert("Добро пожаловать!");
             } else if (youPassword == null) {
@@ -34,7 +30,6 @@ function login() {
             } else {
                 alert("Пароль не верный");
             }
-        }
     }
     else if (youLogin == null) {
         alert("Вход отменен");
