@@ -38,6 +38,29 @@ function login() {
         alert("Я вас не знаю");
     }
 }
+function cycle1(){
+    for (var i = 0; i < 3; i++){
+        alert("номер" + i + "!");
+    }
+}
+function cycle2(){
+    let i = 0;
+    while (i < 3){
+        i = i + 1;
+        alert("номер" + i + "!");
+    }
+}
+function Num() {
+    while (true) {
+        const value = prompt('Введите число <100');
+        console.log(value)
+        if (+value > 100 || value == null) {
+            break
+        }
+
+    }
+}
+
     // let isAdmin = confirm('Вы администратор?');
     // console.log(isAdmin);
     //
