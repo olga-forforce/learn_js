@@ -9,13 +9,24 @@
     <script src="main.js"></script>
 </head>
 <body>
-<button onclick="buttonAboutJS()">EcmaScript</button>
-<button onclick="buttonClick()">Num</button>
-<button onclick="login()">Login</button>
 
-<p><button onclick="cycle1()">For</button></p>
-<p><button onclick="cycle2()">While</button></p>
+<input type="button" id="hider" value="Нажмите, чтобы спрятать текст">
+<div id="text">Текст</div>
+<script>
+    let elem = document.getElementById('hider');
+    elem.onclick = function (){
+        document.getElementById("text").style.display = "none";
+    }
 
-<p><button onclick="Num()">Ввод числа</button></p>
+</script>
+
+<!--<button onclick="buttonAboutJS()">EcmaScript</button>-->
+<!--<button onclick="buttonClick()">Num</button>-->
+<!--<button onclick="login()">Login</button>-->
+
+<!--<p><button onclick="cycle1()">For</button></p>-->
+<!--<p><button onclick="cycle2()">While</button></p>-->
+
+<!--<p><button onclick="Num()">Ввод числа</button></p>-->
 </body>
 </html>
