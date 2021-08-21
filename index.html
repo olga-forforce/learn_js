@@ -6,27 +6,38 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="main.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <style>
+        #langs p {display: none;}
+        #langs p.first {display: block;}
+    </style>
 </head>
 <body>
-
-<input type="button" id="hider" value="Нажмите, чтобы спрятать текст">
-<div id="text">Текст</div>
-<button class="button" onclick="this.hidden=true">THIS</button>
-<script>
-    let elem = document.getElementById('hider');
-    elem.onclick = function (){
-        console.log(this)
-        document.getElementById("text").style.display = "none";
-    }
+<h3>Выбранный язык</h3>
+<div id="langs">
+    <p class="first">Java</p>
+    <p>C/C++</p>
+    <p>PHP</p>
+    <p class="last">JavaScript</p>
+</div>
+<button id="prev">Назад</button>
+<button id="next">Вперед</button>
+<script type="text/javascript">
+    $(function (){
+        var current = $("div#langs p").first();
+        $('#next').click(function (){
+            $(current).not('.last').hide("fast", function (){
+                current = $(current).next('p');
+                $(current).show("fast");
+            });
+        });
+        $('#prev').click(function (){
+            $(current).not('.first').hide("fast", function () {
+                current = $(current).prev('p');
+                $(current).show("fast");
+            });
+        });
+    });
 </script>
-<!--<button onclick="buttonAboutJS()">EcmaScript</button>-->
-<!--<button onclick="buttonClick()">Num</button>-->
-<!--<button onclick="login()">Login</button>-->
-
-<!--<p><button onclick="cycle1()">For</button></p>-->
-<!--<p><button onclick="cycle2()">While</button></p>-->
-
-<!--<p><button onclick="Num()">Ввод числа</button></p>-->
 </body>
 </html>
