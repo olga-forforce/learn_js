@@ -6,27 +6,30 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="main.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
 
 <input type="button" id="hider" value="Нажмите, чтобы спрятать текст">
 <div id="text">Текст</div>
-<button class="button" onclick="this.hidden=true">THIS</button>
+<!--<button class="button" onclick="this.hidden=true">THIS</button>-->
+<button class="button">THIS</button>
 <script>
-    let elem = document.getElementById('hider');
-    elem.onclick = function (){
-        console.log(this)
-        document.getElementById("text").style.display = "none";
-    }
+    const $elem = $('#hider');
+    $elem.click(function(){
+        $("#text").css("display", "none");
+    });
+
+    $(".button").click(function() {
+        $(this).css('display', 'none');
+    });
+
+    // let elem = document.getElementById('hider');
+    // elem.onclick = function (){
+    //     console.log(this)
+    //     document.getElementById("text").style.display = "none";
+    // }
 </script>
-<!--<button onclick="buttonAboutJS()">EcmaScript</button>-->
-<!--<button onclick="buttonClick()">Num</button>-->
-<!--<button onclick="login()">Login</button>-->
 
-<!--<p><button onclick="cycle1()">For</button></p>-->
-<!--<p><button onclick="cycle2()">While</button></p>-->
-
-<!--<p><button onclick="Num()">Ввод числа</button></p>-->
 </body>
 </html>
